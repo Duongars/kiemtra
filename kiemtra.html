@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiemtra</title>
+</head>
+
+<body>
+    <script>
+    //    nhập dữ liệu sinh viên
+       let studentInfo = new Array(6);
+       let n=1;
+        for (let i = 0; i < n; i++) {
+            studentInfo[i] = new Array();
+            let j = i + 1;
+            let studentID;
+            let check
+            let l
+            do {
+                studentID = prompt("hãy nhập mã số sinh viên thứ" + " " + j);
+                l = studentID.length;
+                check = studentID.startsWith("S")
+            } while (l != 5 || check == false);
+            studentInfo[i][0] = studentID;
+
+            let studentName
+            do {
+                studentName = prompt("hãy nhập tên sinh viên thứ" + " " + j);
+     
+            } while (studentName.length <= 6 || studentName.length >= 30);
+            studentInfo[i][1] = studentName;
+
+            let studentAge
+            do {
+                studentAge = +prompt("hãy nhập tuổi sinh viên thứ" + " " + j);
+            } while (studentAge < 18 || studentAge > 30 || isNaN(studentAge) == true);
+            studentInfo[i][2] = studentAge;
+
+            let mark_html
+            do {
+                mark_html = +prompt("hãy nhập điểm html của sinh viên thứ" + " " + j)
+            } while (mark_html < 0 || mark_html > 10 || isNaN(mark_html) == true);
+            studentInfo[i][3] = mark_html;
+
+            let mark_css
+            do {
+                mark_css = +prompt("hãy nhập điểm css của sinh viên thứ" + " " + j)
+            } while (mark_css < 0 || mark_css > 10 || isNaN(mark_css) == true);
+            studentInfo[i][4] = mark_css;
+
+            let mark_js
+            do {
+                mark_js = +prompt("hãy nhập điểm js của sinh viên thứ" + " " + j)
+            } while (mark_js < 0 || mark_js > 10 || isNaN(mark_js) == true);
+            studentInfo[i][5] = mark_js;
+
+
+        }
+
+        console.log(studentInfo)
+        // xếp loại sinh viên
+        for (let i = 0; i < n; i++) {
+            let avg_mark = (studentInfo[i][3] + studentInfo[i][4] + studentInfo[i][5]) / 3;
+            console.log(avg_mark);
+            let xeploai
+
+            switch (Math.floor(avg_mark)) {
+                case 9:
+                    xeploai = "xuất sắc";
+                    break;
+                case 8:
+                    xeploai = "giỏi";
+                    break;
+                case 7:
+                    xeploai = "khá";
+                    break;
+                case 6:
+                    xeploai = "trung bình";
+                    break;
+                case 5:
+                    xeploai = "trung bình";
+                    break;
+                default:
+                    xeploai = "yếu";
+                    break
+
+            }
+            console.log(xeploai)
+            studentInfo[i].push(avg_mark, xeploai);
+
+        }
+        console.log(studentInfo);
+// tìm kiếm tên sinh viên
+
+let searchName= prompt("nhập tên sính viên cần tìm kiếm");
+for(i=0;i<1;i++){
+    if (studentInfo[i].includes==searchName)
+   {console.log("có sinh viên này")}
+   else{console.log("không có sinh viên này")}
+   }
+// sắp xếp thep điểm sinh viên
+ 
+    </script>
+</body>
+
+</html>
