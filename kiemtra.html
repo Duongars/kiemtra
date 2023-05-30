@@ -13,7 +13,7 @@
     //    nhập dữ liệu sinh viên
        let studentInfo = new Array(6);
     //    số sinh viên cần nhập dự liệu
-       let n=1;
+       let n=3;
         for (let i = 0; i < n; i++) {
             studentInfo[i] = new Array();
             let j = i + 1;
@@ -103,6 +103,19 @@ for(i=0;i<1;i++){
    else{console.log("không có sinh viên này")}
    }
 // sắp xếp thep điểm sinh viên
+debugger
+for(let i=0;i<=n-1;i++){
+   let temp_markavg = studentInfo[i][6];
+   let temp_studentInfo = studentInfo[i]
+   j=i-1;
+   while(j>=0 && studentInfo[j][6]>temp_markavg){
+    studentInfo[j+1]=studentInfo[j];
+    j--;
+   }
+   studentInfo[j+1]=temp_studentInfo
+ 
+   }
+   console.log(studentInfo);
  
     </script>
 </body>
