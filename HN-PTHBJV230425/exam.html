@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exam dom & event</title>
+  <link rel="stylesheet" href="./exam.css">
+</head>
+
+<body>
+  <section class="container">
+    <h2>Rikkei Academy</h2>
+    <div class="content">
+      <div class="content-left">
+       
+        <form action="">
+          <table cellspacing="10px">
+            <tr>
+              <td><label for="product_id">Product ID</label></td>
+              <td>
+                <input type="text" name="product_id" id="product_id" >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="product_name">product name</label></td>
+              <td>
+                <input type="text" name="product_name" id="product_name" >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="import_price">import price</label></td>
+              <td><input type="text" name="import_price" id="import_price" ></td>
+            </tr>
+            <tr>
+              <td><label for="export_price">export price</label></td>
+              <td><input type="text" name="export_price" id="export_price" ></td>
+            </tr>
+            <tr>
+              <td><label for="import_date">import date</label></td>
+              <td><input type="date" name="import_date" id="import_date" ></td>
+            </tr>
+            <tr>
+              <td><label for="size">size</label></td>
+              <td>
+                <label for="x"><input type="checkbox" class="ra" name="size" id="x"  value="x"> X
+                </label>
+                <label for="xl"><input type="checkbox" class="ra" name="size" id="xl" value="xl"> XL</label>
+                <label for="l"><input type="checkbox" class="ra" name="size" id="l" value="l">L</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="">Giới tính</label></td>
+              <td>
+                <label for="male"><input type="radio" class="sex" name="gender" id="male" checked value="male"> Nam
+                </label>
+                <label for="female"><input type="radio" class="sex" name="gender" id="female" value="female"> Nữ</label>
+              </td>
+            </tr>
+           <tr>
+            <td><label for="description">Description</label>
+            </td>
+            <td>
+                
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </td>
+           </tr>
+            <tr>
+             
+              <td><button type="submit" class="btn" id="btnSubmit">submit</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <div class="content-right">
+        <h3>List Product</h3>
+        <div class="search">
+          <label for="search_product">Tìm kiếm học viên : <input type="text" name="product_info"
+              id="product_info"><button type="button" class="search_btn" id="search_btn">search</button></label>
+              <button type="button" class="returnList" id="returnList">Back</button></label>
+
+        </div>
+        <div class="product_list">
+          <table border="1">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Import price</th>
+                <th>export Price</th>
+                <th>import date</th>
+                <th>size</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Action</th>
+  
+              </tr>
+            </thead>
+            <tbody id="productList">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <script src="./exam.js"></script>
+</body>
+
+</html>
